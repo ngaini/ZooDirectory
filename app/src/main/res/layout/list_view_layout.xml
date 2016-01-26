@@ -3,7 +3,7 @@
 
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="120dp"
     android:id="@+id/custom_layout">
 
 
@@ -12,7 +12,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/animal_image_imageView"
-            android:src="@drawable/fanart"
+            android:src="@drawable/majestic_lion"
             android:maxHeight="50dp"
             android:maxWidth="70dp"
             android:layout_margin="5dp"/>
@@ -22,8 +22,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:paddingLeft="5dp"
+
             android:text=" Lion"
             android:textSize="40dp"
+            android:layout_gravity="center"
+
             android:id="@+id/animal_name_textView"/>
 
 

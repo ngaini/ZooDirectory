@@ -1,6 +1,9 @@
 package com.ngaini.zoodirectory;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +18,13 @@ import android.widget.TextView;
 public class custom_zoo_adapter extends ArrayAdapter<String> {
 
 
+    Context context_val;
     private Integer[] animal_images;
     public custom_zoo_adapter(Context context,Integer[] animal_images, String[] animals ) {
 
         //specify the layout that the information needs to set into
         super(context, R.layout.list_view_layout, animals);
-
+        context_val =context;
         this.animal_images=animal_images;
     }
 
@@ -46,6 +50,8 @@ public class custom_zoo_adapter extends ArrayAdapter<String> {
 
         text_view_id.setText(animal_name_value);
         image_view_id.setImageResource(animal_images[position]);
+
+
 
         return customView;
 

@@ -1,5 +1,6 @@
 package com.ngaini.zoodirectory;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-    String[] animals = {"Lion","Orangutan","Panda","Polar Bear","Squirel" };
+    String[] animals = {"Lion","Orangutan","Panda","Polar Bear","Squirrel" };
     Integer[] image_source = {R.drawable.majestic_lion,R.drawable.orangutan, R.drawable.panda, R.drawable.polar_bear, R.drawable.squirrel};
 
     @Override
@@ -58,7 +59,13 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selected_animal = String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(MainActivity.this,selected_animal, Toast.LENGTH_LONG).show();
+                Integer image_value = image_source[position];
+                Toast.makeText(MainActivity.this, selected_animal+"::"+position, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this,DetailActivity.class );
+                intent.putExtra("animal_name",selected_animal);
+                intent.putExtra("animal_image_value", image_value);
+                intent.putExtra("position",position);
+                startActivity(intent);
             }
         });
     }
