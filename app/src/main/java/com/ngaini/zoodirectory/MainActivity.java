@@ -4,12 +4,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-    String[] animals = {"Lion","Zebra","Panda","Polar Bear","Squirel" };
+    String[] animals = {"Lion","Orangutan","Panda","Polar Bear","Squirel" };
+    Integer[] image_source = {R.drawable.majestic_lion,R.drawable.orangutan, R.drawable.panda, R.drawable.polar_bear, R.drawable.squirrel};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +51,15 @@ public class MainActivity extends ActionBarActivity {
     public void createListView()
     {
         ListView list_view_id =(ListView)findViewById(R.id.listView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,animals);
-//        ListView list_view_id =(ListView)findViewById(R.id.listView);
+        ListAdapter adapter = new custom_zoo_adapter(this, image_source, animals);
+
         list_view_id.setAdapter(adapter);
-        
+        list_view_id.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selected_animal = String.valueOf(parent.getItemAtPosition(position));
+                Toast.makeText(MainActivity.this,selected_animal, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
