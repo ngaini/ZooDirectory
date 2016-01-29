@@ -1,9 +1,12 @@
 package com.ngaini.zoodirectory;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class InformationActivity extends ActionBarActivity {
@@ -35,5 +38,13 @@ public class InformationActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void makeCall()
+    {
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        TextView zoo_phone_id = (TextView )findViewById(R.id.zoo_phone_text);
+        callIntent.setData(Uri.parse(zoo_phone_id.getText().toString().trim()));
+        startActivity(callIntent );
     }
 }

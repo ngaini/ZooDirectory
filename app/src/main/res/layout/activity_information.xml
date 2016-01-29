@@ -16,25 +16,39 @@
         android:textSize="40dp"
         android:layout_gravity="center_horizontal"
         android:padding="15dp"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text=" Weekdays from 10am - 5:30pm\n Saturdays from 10am - 4:30pm \n\n *Closed on $th of July and Christmas "
+        android:text=" Weekdays from 10am - 5:30pm\n Saturdays from 10am - 4:30pm \n\n *Closed on 4th of July and Christmas "
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="888-8888"
+        android:text=" 888-8888"
+        android:drawableLeft="@drawable/phone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+       android:clickable="true"
+        android:textStyle="bold"
+        android:autoLink="phone"
+        android:onClick="makeCall"
+        android:id="@+id/zoo_phone_text"
+
 
         />
+
 
 
 </LinearLayout>

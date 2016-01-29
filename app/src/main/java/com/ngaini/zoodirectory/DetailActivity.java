@@ -1,5 +1,6 @@
 package com.ngaini.zoodirectory;
 
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -57,6 +58,7 @@ public class DetailActivity extends ActionBarActivity {
     public void createView(String animal_name_value,int animal_image_value,int position)
     {
         TextView animal_name_id = (TextView) findViewById(R.id.detailActivity_animal_name);
+
         animal_name_id.setText(animal_name_value);
         ImageView animal_pic_id = (ImageView) findViewById(R.id.detailActivity_animal_image);
         animal_pic_id.setImageResource(animal_image_value);
