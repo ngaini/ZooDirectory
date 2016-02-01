@@ -44,6 +44,12 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if(id == R.id.zoo_information)
+        {
+            Intent intent = new Intent(this, InformationActivity.class);
+            this.startActivity(intent);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

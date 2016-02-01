@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class InformationActivity extends ActionBarActivity {
@@ -34,17 +37,21 @@ public class InformationActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void makeCall()
+    public void makeCall(View view)
     {
         Intent callIntent = new Intent(Intent.ACTION_CALL);
         TextView zoo_phone_id = (TextView )findViewById(R.id.zoo_phone_text);
-        callIntent.setData(Uri.parse(zoo_phone_id.getText().toString().trim()));
+//        Log.v("NATHAN", zoo_phone_id.getText().toString().trim()+" !!!");
+//        Toast.makeText(InformationActivity.this ,zoo_phone_id.getText().toString().trim()+" !!!",Toast.LENGTH_SHORT  ).show();
+        callIntent.setData(Uri.parse("tel:"+zoo_phone_id.getText().toString().trim()));
+
         startActivity(callIntent );
     }
 }

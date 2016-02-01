@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text=" 888-8888"
+        android:text=" 8888888"
         android:drawableLeft="@drawable/phone"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="30dp"
@@ -42,7 +42,7 @@
         android:paddingTop="15dp"
        android:clickable="true"
         android:textStyle="bold"
-        android:autoLink="phone"
+
         android:onClick="makeCall"
         android:id="@+id/zoo_phone_text"
 
