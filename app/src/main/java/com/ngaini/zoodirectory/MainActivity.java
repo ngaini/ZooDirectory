@@ -1,5 +1,7 @@
 package com.ngaini.zoodirectory;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
@@ -54,10 +56,6 @@ public class MainActivity extends ActionBarActivity {
         if(id==R.id.zoo_uninstall)
         {
             //menu action for uninstalling the application
-//            Uri package_name = Uri.parse("package:com.ngaini.zoodirectory");
-//            Intent uninstall_intent = new Intent(Intent.ACTION_DELETE, package_name);
-////        uninstall_intent.setData(package_name);
-//            startActivity(uninstall_intent);
             uninstallApp();
         }
 
@@ -77,11 +75,37 @@ public class MainActivity extends ActionBarActivity {
                 String selected_animal = String.valueOf(parent.getItemAtPosition(position));
                 Integer image_value = image_source[position];
                 Toast.makeText(MainActivity.this, selected_animal+"::"+position, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this,DetailActivity.class );
+                final Intent intent = new Intent(MainActivity.this,DetailActivity.class );
                 intent.putExtra("animal_name",selected_animal);
                 intent.putExtra("animal_image_value", image_value);
                 intent.putExtra("position",position);
-                startActivity(intent);
+                if(position==4)
+                {
+                  // show dialogue box
+                   AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle(" ALERT ");
+                    builder.setMessage("Scary animal ahead , Do you wih to continue ?");
+                    builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // continue to view th animal
+                            startActivity(intent);
+                        }
+                    });
+                    builder.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(MainActivity.this,"See you when you have more courage",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    builder.setIcon(android.R.drawable.ic_dialog_alert);
+                    builder.show();
+                }
+                else
+                {
+                    startActivity(intent);
+                }
+//                startActivity(intent);
             }
         });
     }
