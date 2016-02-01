@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
                   // show dialogue box
                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle(" ALERT ");
-                    builder.setMessage("Scary animal ahead , Do you wih to continue ?");
+                    builder.setMessage("Scary animal ahead , Do you wish to continue ?");
                     builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
