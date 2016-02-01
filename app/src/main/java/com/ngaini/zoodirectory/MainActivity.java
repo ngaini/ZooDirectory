@@ -1,6 +1,7 @@
 package com.ngaini.zoodirectory;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -50,6 +51,15 @@ public class MainActivity extends ActionBarActivity {
             this.startActivity(intent);
             return true;
         }
+        if(id==R.id.zoo_uninstall)
+        {
+            //menu action for uninstalling the application
+//            Uri package_name = Uri.parse("package:com.ngaini.zoodirectory");
+//            Intent uninstall_intent = new Intent(Intent.ACTION_DELETE, package_name);
+////        uninstall_intent.setData(package_name);
+//            startActivity(uninstall_intent);
+            uninstallApp();
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -75,4 +85,15 @@ public class MainActivity extends ActionBarActivity {
             }
         });
     }
+
+    // method to uninstall the application
+    public void uninstallApp()
+    {
+        Uri package_name = Uri.parse("package:com.ngaini.zoodirectory");
+        Intent uninstall_intent = new Intent(Intent.ACTION_DELETE, package_name);
+//        uninstall_intent.setData(package_name);
+        startActivity(uninstall_intent);
+
+    }
+
 }

@@ -5,8 +5,14 @@
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/zoo_information"
         android:title="Zoo Information"
-        android:orderInCategory="99"
+        android:orderInCategory="98"
         app:showAsAction="never"
 
         />
+    <item
+        android:id="@+id/zoo_uninstall"
+        android:title="Uninstall"
+        android:orderInCategory="99"
+        app:showAsAction="never"/>
+
 </menu>

@@ -54,4 +54,6 @@ public class InformationActivity extends ActionBarActivity {
 
         startActivity(callIntent );
     }
+
+
 }
