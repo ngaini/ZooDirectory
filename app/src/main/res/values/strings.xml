@@ -5,7 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_detail">DetailActivity</string>
-    <string name="phone_icon_text">&#xf095;</string>
+    <string name="phone_icon_text"></string>
     <string name="title_activity_information">InformationActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
 
 </resources>

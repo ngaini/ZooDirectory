@@ -16,7 +16,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends BaseActivity {
     String[] animals = {"Lion","Orangutan","Panda","Polar Bear","Squirrel" };
     Integer[] image_source = {R.drawable.majestic_lion,R.drawable.orangutan, R.drawable.panda, R.drawable.polar_bear, R.drawable.squirrel};
 
@@ -29,38 +29,38 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        if(id == R.id.zoo_information)
-        {
-            Intent intent = new Intent(this, InformationActivity.class);
-            this.startActivity(intent);
-            return true;
-        }
-        if(id==R.id.zoo_uninstall)
-        {
-            //menu action for uninstalling the application
-            uninstallApp();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//        if(id == R.id.zoo_information)
+//        {
+//            Intent intent = new Intent(this, InformationActivity.class);
+//            this.startActivity(intent);
+//            return true;
+//        }
+//        if(id==R.id.zoo_uninstall)
+//        {
+//            //menu action for uninstalling the application
+//            uninstallApp();
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
     //Method for creating the list view
     public void createListView()
@@ -110,14 +110,14 @@ public class MainActivity extends ActionBarActivity {
         });
     }
 
-    // method to uninstall the application
-    public void uninstallApp()
-    {
-        Uri package_name = Uri.parse("package:com.ngaini.zoodirectory");
-        Intent uninstall_intent = new Intent(Intent.ACTION_DELETE, package_name);
-//        uninstall_intent.setData(package_name);
-        startActivity(uninstall_intent);
-
-    }
+//    // method to uninstall the application
+//    public void uninstallApp()
+//    {
+//        Uri package_name = Uri.parse("package:com.ngaini.zoodirectory");
+//        Intent uninstall_intent = new Intent(Intent.ACTION_DELETE, package_name);
+////        uninstall_intent.setData(package_name);
+//        startActivity(uninstall_intent);
+//
+//    }
 
 }
