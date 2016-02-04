@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zoo de Santa Clara</string>
+    <string name="hello_world">Bonjour le monde!</string>
+    <string name="action_settings">Réglages</string>
+    <string name="title_activity_detail">Zoo de Santa Clara</string>
+    <string name="phone_icon_text"></string>
+    <string name="title_activity_information">Zoo: Renseignements</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="zoo_name_string">Zoo de Santa Clara</string>
+    <string name="zoo_contact_string">888-8888</string>
+    <string name="zoo_info_menu_string">informations zoo</string>
+    <string name="zoo_uninstall_menu_string">Désinstaller</string>
+    <string name="zoo_schedule_infromation_string">Horaire hebdomadaire\n\n En semaine de 10h - 5:30 pm\n Samedi de 10h - 4:30 pm \n\n *Fermé le 4 Juillet et Noël </string>
+</resources>

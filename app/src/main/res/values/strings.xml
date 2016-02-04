@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ZooDirectory</string>
+    <string name="app_name">Santa Clara Zoo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_detail">Santa Clara Zoo</string>
     <string name="phone_icon_text"></string>
-    <string name="title_activity_information">InformationActivity</string>
+    <string name="title_activity_information">Zoo: Information</string>
     <string name="title_activity_base">BaseActivity</string>
-
+    <string name="zoo_name_string">Santa Clara Zoo</string>
+    <string name="zoo_contact_string">888-8888</string>
+    <string name="zoo_info_menu_string">Zoo Information</string>
+    <string name="zoo_uninstall_menu_string">Uninstall</string>
+    <string name="zoo_schedule_infromation_string">Weekly Schedule\n\n Weekdays from 10am - 5:30pm\n Saturdays from 10am - 4:30pm \n\n *Closed on 4th of July and Christmas </string>
 </resources>

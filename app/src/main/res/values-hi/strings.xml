@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">सांता क्लारा चिड़ियाघर</string>
+    <string name="hello_world">नमस्ते दुनिया!</string>
+    <string name="action_settings">सेटिंग</string>
+    <string name="title_activity_detail">सांता क्लारा चिड़ियाघर</string>
+    <string name="phone_icon_text"></string>
+    <string name="title_activity_information">चिड़ियाघर: जानकारी</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="zoo_name_string">सांता क्लारा चिड़ियाघर</string>
+    <string name="zoo_contact_string">८८८-८८८८</string>
+    <string name="zoo_info_menu_string">चिड़ियाघर: जानकारी</string>
+    <string name="zoo_uninstall_menu_string">हटा दें</string>
+    <string name="zoo_schedule_infromation_string">साप्ताहिक कार्यक्रम\n\nसोमवार से शुक्रवार १०:०० सुबह बजे - ५:३० शाम बजे\शनिवार १०:०० सुबह बजे - ४:३० शाम बजे \n\n *4 जुलाई और क्रिसमस पर बंद रहता है </string>
+</resources>

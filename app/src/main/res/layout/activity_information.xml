@@ -1,6 +1,13 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -8,7 +15,7 @@
     android:orientation="vertical">
 
     <TextView 
-        android:text="Santa Clara Zoo"
+        android:text="@string/zoo_name_string"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -17,7 +24,7 @@
         android:layout_gravity="center_horizontal"
         android:padding="15dp"
         android:layout_margin="10dp"
-
+        android:textColor="#ff8d39eb"
         />
 
     <TextView
@@ -25,8 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text=" Weekdays from 10am - 5:30pm\n Saturdays from 10am - 4:30pm \n\n *Closed on 4th of July and Christmas "
+        android:text="@string/zoo_schedule_infromation_string"
         android:textAppearance="?android:attr/textAppearanceMedium"
+
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         />
@@ -34,15 +42,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text=" 8888888"
+        android:text="@string/zoo_contact_string"
         android:drawableLeft="@drawable/phone"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="30dp"
         android:paddingRight="15dp"
         android:paddingTop="15dp"
-       android:clickable="true"
+        android:clickable="true"
         android:textStyle="bold"
-
+        android:textColor="#ff86ff00"
         android:onClick="makeCall"
         android:id="@+id/zoo_phone_text"
 
@@ -52,3 +60,4 @@
 
 
 </LinearLayout>
+</ScrollView>
