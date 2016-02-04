@@ -28,7 +28,7 @@ public class DetailActivity extends BaseActivity {
             value2 = extras.getInt("animal_image_value");
             value3 = extras.getInt("position");
         }
-        Toast.makeText(DetailActivity.this, value1+value2 ,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(DetailActivity.this, value1+value2 ,Toast.LENGTH_SHORT).show();
         createView(value1,value2, value3);
     }
 

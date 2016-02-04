@@ -74,7 +74,7 @@ public class MainActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selected_animal = String.valueOf(parent.getItemAtPosition(position));
                 Integer image_value = image_source[position];
-                Toast.makeText(MainActivity.this, selected_animal+"::"+position, Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this, selected_animal+"::"+position, Toast.LENGTH_LONG).show();
                 final Intent intent = new Intent(MainActivity.this,DetailActivity.class );
                 intent.putExtra("animal_name",selected_animal);
                 intent.putExtra("animal_image_value", image_value);
